@@ -1,0 +1,19 @@
+<h2>Orders</h2>
+<table class="table table-striped mt-5">
+    <thead>
+    <tr>
+        <th>Job</th>
+        <th>Part</th>
+        <th>User ID</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+        <td>{{ order.jobName }}</td>
+        <td>{{ partService.partMap.get(order.partId) || order.partId }}</td>
+        <td>{{ order.userId }}</td>
+        <td>{{ order.qty }}</td>
+    </tr>
+    </tbody>
+</table>
